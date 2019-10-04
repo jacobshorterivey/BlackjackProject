@@ -1,4 +1,4 @@
-package com.skilldistillery.blackjack;
+package com.skilldistillery.cards;
 
 public class CardTest {
   public static void main(String[] args) {
