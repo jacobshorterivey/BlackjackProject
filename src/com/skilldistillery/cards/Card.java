@@ -5,20 +5,16 @@ public class Card {
 	private Suit suit;
 	private Rank rank;
 	
-	
 	//CONSTRUCTORS
 	public Card(Suit suit, Rank rank) {
 		super();
 		this.suit = suit;
 		this.rank = rank;
 	}
-	
-	
 
 	public int getValue() {
 		return rank.getValue();
 	}
-
 
 	//METHODS
 	@Override
@@ -29,7 +25,6 @@ public class Card {
 		result = prime * result + ((suit == null) ? 0 : suit.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -51,10 +46,4 @@ public class Card {
 	public String toString() {
 		return rank + " of " + suit;
 	}
-	
-	
-	
-	
-	
-	
 }

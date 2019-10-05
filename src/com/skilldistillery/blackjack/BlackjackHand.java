@@ -1,7 +1,5 @@
 package com.skilldistillery.blackjack;
 
-import java.util.List;
-
 import com.skilldistillery.cards.Card;
 import com.skilldistillery.cards.Hand;
 
@@ -9,8 +7,8 @@ public class BlackjackHand extends Hand {
 	// FIELDS
 
 	// CONSTRUCTORS
-	public BlackjackHand(List<Card> hand) {
-		super(hand);
+	public BlackjackHand() {
+		super();
 	}
 
 	// METHODS
@@ -36,6 +34,7 @@ public class BlackjackHand extends Hand {
 
 	public boolean isBust() {
 		if (getHandValue() > 21) {
+			System.out.println("Bust!");
 			return true;
 		} else {
 			return false;

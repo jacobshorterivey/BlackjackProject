@@ -4,40 +4,44 @@ import java.util.LinkedList;
 import java.util.List;
 
 public abstract class Hand {
-	//FIELDS
+	// FIELDS
 	protected List<Card> hand;
 
-	//CONSTRUCTORS
-	public Hand(List<Card> hand) {
+	// CONSTRUCTORS
+	public Hand() {
 		hand = new LinkedList<Card>();
-		this.hand = hand;
 	}
-	
-	
-	//METHODS
-	public void addCard(Card card) {
-		
-	}
-	
-	public void clear() {
-		
-	}
-	
-	public abstract int getHandValue();
 
+	// METHODS
+	public void addCard(Card card) {
+		hand.add(card);
+	}
+
+	public void clear() {
+		hand.clear();
+	}
+
+	public int getHandSize() {
+		return hand.size();
+	}
+
+	public List<Card> getHandList() {
+		return this.hand;
+	}
+
+	public abstract int getHandValue();
 
 	@Override
 	public String toString() {
-		StringBuilder builder = new StringBuilder("Your hand: ");
+		StringBuilder builder = new StringBuilder("hand: ");
 		for (Card card : hand) {
 			builder.append(card.toString()).append(", ");
 		}
-		if(    builder.charAt(builder.length()-1) == ',' ) {
-			builder.deleteCharAt(builder.length()-1);
+		if (builder.charAt(builder.length() - 2) == ',') {
+			builder.deleteCharAt(builder.length() - 2);
 		}
-		
+
 		return builder.toString();
 	}
-	
-	
+
 }
