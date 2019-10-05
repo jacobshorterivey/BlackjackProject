@@ -25,7 +25,6 @@ public class BlackjackHand extends Hand {
 	public boolean isBlackjack() {
 		if (hand.size() == 2) {
 			if (getHandValue() == 21) {
-				System.out.println("BLACKJACK!!!");
 				return true;
 			}
 		}
@@ -34,22 +33,11 @@ public class BlackjackHand extends Hand {
 
 	public boolean isBust() {
 		if (getHandValue() > 21) {
-			System.out.println("Bust!");
 			return true;
 		} else {
 			return false;
 		}
 	}
 
-//	public boolean isHard() {
-//		
-//		
-//		return false;
-//	}
-//	public boolean isSoft() {
-//		
-//		
-//		return false;
-//	}
 
 }
