@@ -1,6 +1,6 @@
 ## Blackjack Project
 
-### Week 3 Homework Project for Skill Distillery
+### Week 4 Homework Project for Skill Distillery
 
 ### Overview
 Our assignment was to simulate a blackjack game, with a dealer, a player and hands for each of them. We also needed to model the cards and deck, with the cards being able to be removed and dealt from the deck.
